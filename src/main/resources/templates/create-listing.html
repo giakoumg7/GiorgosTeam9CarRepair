@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <meta content="Short website description" name="description">
+    <link href="./assets/favicon.png" rel="icon">
+
+    <title>Add Listing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/dashboard.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
+                    data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./users.html">Users</a></li>
+                <li><a href="./listings.html">Listings</a></li>
+                <li><a href="./login.html">Logout</a></li>
+            </ul>
+
+            <form action="/search" class="navbar-form navbar-right" id="search">
+                <div class="form-group">
+                    <input class="form-control" id="searchID" name="searchID" placeholder="search..." type="text">
+                </div>
+                <button class="btn btn-default" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li><a href="./users.html">Users</a></li>
+                <li><a href="./create-user.html">Add User</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="./listings.html">Listing</a></li>
+                <li><a href="./create-listing.html">Add listing</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Add Listing</h1>
+            <form action="/create-listing" class="form-horizontal" id="create-listing">
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="dateListing">Date</label>
+                    <div class="col-sm-11">
+                        <input class="form-control" id="dateListing" name="dateListing" placeholder="Date" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="status">Status</label>
+                    <div class="col-sm-11">
+                        <select class="form-control" id="status" name="status">
+                            <option value="" disabled selected>Select your option</option>
+                            <option selected value="Pending">Pending</option>
+                            <option value="Processed">Processed</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="type">Status</label>
+                    <div class="col-sm-11">
+                        <select class="form-control" id="type" name="type">
+                            <option selected value="Type A">Type A</option>
+                            <option value="Type B">Type B</option>
+                            <option value="Type C">Type C</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="price">Price</label>
+                    <div class="col-sm-11">
+                        <input class="form-control" id="price" name="price" placeholder="Price" type="number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="company">Company</label>
+                    <div class="col-sm-11">
+                        <input class="form-control" id="company" name="company" placeholder="Company" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label" for="description">Description</label>
+                    <div class="col-sm-11">
+                        <textarea class="form-control" cols="30" id="description" name="description" placeholder="Description"
+                                  rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <button class="btn btn-default" type="reset">Reset</button>
+                        <button class="btn btn-primary" type="submit">Create</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+</body>
+</html>
